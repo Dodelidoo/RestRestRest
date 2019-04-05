@@ -1,0 +1,14 @@
+C:\projects\Week8\ApiRest\src\obj\Debug\netcoreapp2.2\src.csprojAssemblyReference.cache
+C:\projects\Week8\ApiRest\src\obj\Debug\netcoreapp2.2\src.csproj.CoreCompileInputs.cache
+C:\projects\Week8\ApiRest\src\obj\Debug\netcoreapp2.2\src.RazorAssemblyInfo.cache
+C:\projects\Week8\ApiRest\src\obj\Debug\netcoreapp2.2\src.RazorAssemblyInfo.cs
+C:\projects\Week8\ApiRest\src\obj\Debug\netcoreapp2.2\src.AssemblyInfoInputs.cache
+C:\projects\Week8\ApiRest\src\obj\Debug\netcoreapp2.2\src.AssemblyInfo.cs
+C:\projects\Week8\ApiRest\src\bin\Debug\netcoreapp2.2\src.deps.json
+C:\projects\Week8\ApiRest\src\bin\Debug\netcoreapp2.2\src.runtimeconfig.json
+C:\projects\Week8\ApiRest\src\bin\Debug\netcoreapp2.2\src.runtimeconfig.dev.json
+C:\projects\Week8\ApiRest\src\bin\Debug\netcoreapp2.2\src.dll
+C:\projects\Week8\ApiRest\src\bin\Debug\netcoreapp2.2\src.pdb
+C:\projects\Week8\ApiRest\src\obj\Debug\netcoreapp2.2\src.RazorTargetAssemblyInfo.cache
+C:\projects\Week8\ApiRest\src\obj\Debug\netcoreapp2.2\src.dll
+C:\projects\Week8\ApiRest\src\obj\Debug\netcoreapp2.2\src.pdb
