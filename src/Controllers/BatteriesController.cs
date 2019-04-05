@@ -30,15 +30,13 @@ namespace Supermarket.API.Controllers
         {
             
             var batteries = await _batteryService.ListAsync();
-            Console.WriteLine("c1");
             foreach(var i in batteries)
             {
              Console.WriteLine(i.id);
              Console.WriteLine(i.status);
             }
-            Console.WriteLine("c2");
             var resources = _mapper.Map<IEnumerable<Battery>, IEnumerable<BatteryResource>>(batteries);
-            Console.WriteLine("c3");
+            Console.WriteLine("^--Get List");
             
             return resources;
         }
@@ -65,26 +63,36 @@ namespace Supermarket.API.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> PutAsync(int id, [FromBody] SaveBatteryResource resource)
         {
-            Console.WriteLine("bat1");
             
+
             if (!ModelState.IsValid)
                 return BadRequest(ModelState.GetErrorMessages());
 
-                Console.WriteLine("bat2");
+            Console.WriteLine(id);
+            Console.WriteLine("^--Put Id");
 
             var battery = _mapper.Map<SaveBatteryResource, Battery>(resource);
-            var result = await _batteryService.UpdateAsync(id, battery);
 
-            Console.WriteLine("bat3");
+            Console.WriteLine(resource.status);
+            Console.WriteLine("^--Resource Controller Status");
+            Console.WriteLine();
+            Console.WriteLine(battery);
+            Console.WriteLine("^--Battery Controller");
+            Console.WriteLine();
+
+            var result = await _batteryService.UpdateAsync(id , battery);
+
 
             if (!result.Success)
                 return BadRequest(result.Message);
 
-                Console.WriteLine("bat4");
-
+              
             var batteryResource = _mapper.Map<Battery, BatteryResource>(result.Battery);
 
-            Console.WriteLine("bat5");
+            Console.WriteLine(result);
+            Console.WriteLine("Result Put Controller end");
+            Console.WriteLine();
+            
 
             return Ok(batteryResource);
 

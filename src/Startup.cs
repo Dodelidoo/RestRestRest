@@ -44,6 +44,11 @@ namespace src
 
             services.AddScoped<IBatteryRepository, BatteryRepository>();
             services.AddScoped<IBatteryService, BatteryService>();
+
+            services.Configure<ApiBehaviorOptions>(options =>
+            {
+                options.SuppressModelStateInvalidFilter = true;
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
