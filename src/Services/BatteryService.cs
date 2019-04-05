@@ -65,12 +65,6 @@ namespace Supermarket.API.Services
             {
 
                 _batteryRepository.Update(existingBattery);
-
-             Console.WriteLine(existingBattery);
-             Console.WriteLine(existingBattery.status);
-             Console.WriteLine("^--Existing Battery status");
-             Console.WriteLine();
-             
             
                 return new BatteryResponse(existingBattery);
             }
