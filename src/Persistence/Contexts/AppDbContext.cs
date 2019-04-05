@@ -15,8 +15,12 @@ namespace Supermarket.API.Persistence.Contexts
             
             builder.Entity<Battery>().ToTable("batteries");
             builder.Entity<Battery>().HasKey(p => p.id);
-            builder.Entity<Battery>().Property(p => p.building_id).IsRequired().ValueGeneratedOnAdd();
             builder.Entity<Battery>().Property(p => p.status).IsRequired().HasMaxLength(32);
+        }
+    }
+}
+
+            // builder.Entity<Battery>().Property(p => p.building_id).IsRequired().ValueGeneratedOnAdd();
         //    builder.Entity<Battery>().HasMany(p => p.Products).WithOne(p => p.Battery).HasForeignKey(p => p.BatteryId);
 
             // builder.Entity<Battery>().HasData
@@ -24,6 +28,3 @@ namespace Supermarket.API.Persistence.Contexts
             //     new Battery { Id = 100, Name = "Fruits and Vegetables" }, // Id set manually due to in-memory provider
             //     new Battery { Id = 101, Name = "Dairy" }
             // );
-        }
-    }
-}

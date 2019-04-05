@@ -7,8 +7,6 @@ namespace Supermarket.API.Domain.Models
     public class Battery
     {
         public int id { get; set; }
-        public int building_id { get; set; }
-
         public string status { get; set; }
 
 

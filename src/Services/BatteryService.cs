@@ -16,6 +16,7 @@ namespace Supermarket.API.Services
 
         public BatteryService(IBatteryRepository batteryRepository)
         {
+            
             _batteryRepository = batteryRepository;
             
         }
@@ -48,21 +49,35 @@ namespace Supermarket.API.Services
         {
             var existingBattery = await _batteryRepository.FindByIdAsync(id);
 
+            Console.WriteLine(battery);
+            Console.WriteLine(id);
+            Console.WriteLine("^--Battery Update Async");
+            Console.WriteLine();
+
             if (existingBattery == null)
                 return new BatteryResponse("Battery not found.");
 
             existingBattery.id = battery.id;
-            
+            existingBattery.status = battery.status;
+
 
             try
             {
-                _batteryRepository.Update(existingBattery);
-               
 
+                _batteryRepository.Update(existingBattery);
+
+             Console.WriteLine(existingBattery);
+             Console.WriteLine(existingBattery.status);
+             Console.WriteLine("^--Existing Battery status");
+             Console.WriteLine();
+             
+            
                 return new BatteryResponse(existingBattery);
             }
+
             catch (Exception ex)
             {
+                
                 // Do some logging stuff
                 return new BatteryResponse($"An error occurred when updating the battery: {ex.Message}");
             }
