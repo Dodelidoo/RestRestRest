@@ -35,14 +35,11 @@ namespace Supermarket.API.Persistence.Repositories
         public void Update(Battery battery)
         {
             Console.WriteLine(battery.status);
-            Console.WriteLine("^--Update Battery");
+            Console.WriteLine("^--Updated Battery Info");
             Console.WriteLine();
 
             _context.Entry(battery).State = EntityState.Modified;
             var recordsUpdated = _context.Batteries.Update(battery);
-
-            Console.WriteLine("^--Records Updated");
-            Console.WriteLine();
 
             recordsUpdated.Context.SaveChanges();
         }

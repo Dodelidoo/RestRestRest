@@ -89,14 +89,8 @@ namespace Supermarket.API.Controllers
               
             var batteryResource = _mapper.Map<Battery, BatteryResource>(result.Battery);
 
-            Console.WriteLine(result);
-            Console.WriteLine("Result Put Controller end");
-            Console.WriteLine();
-            
-
             return Ok(batteryResource);
-
-           
+          
         }
 
         [HttpDelete("{id}")]
