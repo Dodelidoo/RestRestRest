@@ -51,13 +51,13 @@ namespace Supermarket.API.Services
 
             Console.WriteLine(battery);
             Console.WriteLine(id);
-            Console.WriteLine("^--Battery Update Async");
+            Console.WriteLine("^--Battery Update Async Method");
             Console.WriteLine();
 
             if (existingBattery == null)
                 return new BatteryResponse("Battery not found.");
 
-            existingBattery.id = battery.id;
+            // existingBattery.id = battery.id;
             existingBattery.status = battery.status;
 
 

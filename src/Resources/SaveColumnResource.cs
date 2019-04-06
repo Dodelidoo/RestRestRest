@@ -4,7 +4,7 @@ using System;
 
 namespace Supermarket.API.Resources
 {
-    public class SaveBatteryResource
+    public class SaveColumnResource
     {
         public int id { get; set; }
 

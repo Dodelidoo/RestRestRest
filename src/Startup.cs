@@ -45,6 +45,9 @@ namespace src
             services.AddScoped<IBatteryRepository, BatteryRepository>();
             services.AddScoped<IBatteryService, BatteryService>();
 
+            services.AddScoped<IColumnRepository, ColumnRepository>();
+            services.AddScoped<IColumnService, ColumnService>();
+
             services.Configure<ApiBehaviorOptions>(options =>
             {
                 options.SuppressModelStateInvalidFilter = true;

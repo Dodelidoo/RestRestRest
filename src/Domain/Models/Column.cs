@@ -3,13 +3,14 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Supermarket.API.Domain.Models
 {
-    [Table("batteries")]
-    public class Battery
+    [Table("columns")]
+    public class Column
     {
         public int id { get; set; }
         public string status { get; set; }
 
-        public IList<Column> Column { get; set; } = new List<Column>();
-
+        public Battery Battery { get; set; }
+        
     }
 }
+    // public int BatteryId { get; set; }
